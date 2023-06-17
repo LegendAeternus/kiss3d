@@ -570,8 +570,8 @@ impl AbstractContext for GLContext {
         unsafe { self.context.draw_arrays(mode, first, count) }
     }
 
-    fn point_size(&self, _size: f32) {
-        //        unsafe { self.context.point_size(size) }
+    fn point_size(&self, size: f32) {
+        unsafe { self.context.point_size(size) }
     }
 
     fn line_width(&self, width: f32) {
